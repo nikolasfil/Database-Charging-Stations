@@ -1,0 +1,85 @@
+\documentclass[10pt]{beamer}
+% \usetheme{}
+\usecolortheme{beaver}
+
+\usepackage[greek, english]{babel}
+\usepackage{fontspec}
+\setsansfont{DejaVuSansMono Nerd Font}
+
+\setbeamersize{text margin left=10mm,text margin right=10mm}
+
+\usepackage{graphicx}
+\usepackage{changepage}
+
+\title{Εφαρμογή Διαχείρησης Σταθμών Φόρτισης Ηλεκτρικών Αυτοκινήτων}
+\author{Αλυσσανδράκης Νικόλαος-Αλκίνοος \newline ~Φιλιππάτος Νικόλας}
+\date{09-11-2022}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Μικρόκοσμος(1/2)}
+
+    Μας ζητήθηκε να φτιάξουμε μια εφαρμογή που διαχειρίζεται σταθμούς φόρτισης ηλεκτρικών αυτοκινήτων.\newline
+
+    Οι σταθμοί φόρτισης βρίσκονται σε διάφορες περιοχές με γνωστές συντεταγμένες για εύκολη αναζήτηση και έχουν συγκεκριμένο αριθμό φορτιστών (θέσεων).\newline
+
+    Κάθε φορτιστής χαρακτηρίζεται από το id της τοποθεσίας και τον αριθμό θέσης εκεi, μια ένδειξη για την σωστή λειτουργία του, εάν είναι κατειλλημένος ή όχι και τι τύπο σύνδεσης έχει. 
+    Υπάρχουν δύο κατηγορίες φορτιστών: AC και DC.\newline
+
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Μικρόκοσμος(2/2)}
+    
+    Στην περίπτωση σφάλματος, καταγράφεται πότε έγινε το σφάλμα, ο τύπος του σφάλματος και όταν διορθωθεί καταγράφεται η ώρα (και ημερομηνία) διόρθωσης\newline
+
+    Ο κάθε πελάτης είναι συνδρομητής σε ένα πρόγραμμα το οποίο καθορίζει την τιμή που πληρώνει για κάθε kWh, και έχει το δικαίωμα να δεσμέυει (reserves) έναν φορτιστή για συγκεκριμένη ημερομηνία,ώρα και χρονικό διάστημα.\newline
+
+    Το κάθε αυτοκίνητο έχει ένα συγκεκριμένο αριθμό πινακίδας, χωρητικότητα ηλεκτρικής ενέργειας και τύπο φορτιστή που δέχεται.
+\end{frame}
+
+\begin{frame}
+    \frametitle{ERD}
+
+    \begin{adjustwidth*}{-3cm}{-3cm}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth]{img/ChStat_present5_img.png}
+    \end{figure}
+    \end{adjustwidth*}
+
+\end{frame}
+
+% \begin{frame}
+%     \frametitle{Σχεσιακό Μοντέλο}
+
+%     \begin{figure}
+%     %\includegraphics[width=18cm]{charging stations db -v2 .png}
+%     \end{figure}
+% \end{frame}
+
+
+\begin{frame}
+    \frametitle{Πληροφορίες που παρέχει το σύστημα}
+
+    \begin{itemize}
+        \item Αριθμός φορτιστών με βάση τον τύπο τους
+        \item Πόσα οχήματα φορτίζονται αυτή τη στιγμή
+        \item Πόση είναι η συνολική ενέργεια που έχει καταναλωθεί
+        \item Ποιος σταθμός καταναλώνει περισσότερη ενέργεια το μήνα
+        \item Ώρες αιχμής κάθε σταθμού ή όλου του συστήματος
+        \item Μέσος όρος χρόνου ανάμεσα σε σφάλματα
+        \item Μέσος όρος kWh ανάμεσα σε σφάλματα
+        \item Έσοδα ενός σταθμού
+
+    \end{itemize}
+\end{frame}
+
+\end{document}
