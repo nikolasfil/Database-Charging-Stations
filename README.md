@@ -1,6 +1,12 @@
 
 ## Application for Car Charging Stations Management
 
+This is the project for the Database course in ECE Univ of Patras, winter 2023.
+
+**Contributors**:
+
+Alyssandrakis Alkinoos-Nikolaos
+Filippatos Nikolaos
 
 ----
 
